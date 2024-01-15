@@ -1,0 +1,31 @@
+posso renderizzare il componente Hello quante volte voglio all'interno di "App.jsx"
+il componente sarà semplicemente renderizzato due volte dal metodo render.
+posso altresì renderizzare message direttamente su app.jsx e al contrario di quando lo renderizzo dentro hello.jsx
+non è necessario racchiuderlo all'interno dei tag <></> perché racchiudendo i due componenti all'interno di un div
+abbiamo come risultato solo il div come componente padre, condizione necessaria affinché react funzioni correttamente
+
+export function Hello() {
+    return (
+      <>
+        <h2>Hello Word</h2>
+        <Message />
+      </>
+    );
+}
+export function App() {
+  return (
+    <div>
+      <Hello />
+      <Message />
+    </div>
+  );
+}
+togliendo il div anchè quì è necessario utilizzare i tag vuoti perché non abbiamo un solo componente padre
+export function App() {
+  return (
+    <>
+      <Hello />
+      <Message />
+    </>
+  );
+}
