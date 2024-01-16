@@ -5,7 +5,8 @@ export function App({name}) {
   return (
     <div>
       <h3>ciao sono {name}</h3>
-      <Hello />
+      <Hello/>
+      
     </div>
   );
 }
