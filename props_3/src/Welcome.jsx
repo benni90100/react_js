@@ -5,7 +5,7 @@ export function Welcome({name}) {
     return(
         <>
         <p>Welcome, {name}</p>
-        <Age =25/>
+        <Age age={25}/>
         </>
         
     )

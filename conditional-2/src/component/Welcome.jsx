@@ -1,6 +1,6 @@
 import { Age } from "./Age"
 
-export function Welcome({name}) {
+export function Welcome({ name }) {
     const myAge = 18
     return(
         <>
