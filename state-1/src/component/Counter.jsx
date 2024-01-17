@@ -1,0 +1,15 @@
+import { useState } from "react";
+
+export function Counter({ startCounter }) {
+  const [count, setCount] = useState(startCounter);
+
+  function handleCounterIncrement() {
+    setCount(count + 1);
+  }
+  return (
+    <>
+      <h2>il numero è {count}</h2>
+      <button onClick={handleCounterIncrement}>Incrementa</button>
+    </>
+  );
+}
