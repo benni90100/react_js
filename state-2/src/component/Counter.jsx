@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
+
 export function Counter({startCount = 20, increment = 5 }) {
   const [count, setCount] = useState(startCount);
+  
   function handleIncrementCount() {
     setCount(count + increment);
   }
