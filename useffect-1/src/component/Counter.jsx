@@ -8,6 +8,9 @@ export function Counter() {
   useEffect(()=>{
     console.log(count);
   }, [count])
+  //useEffect restituisce il corretto valore di count ogni volta che viene aggiornato count
+  //mentre chiamando handelIncrementCount, count non viene subito aggiornato al valore corrente, 
+  //ma solo aggiornato il suo render in pagina
   return (
     <>
       <button onClick={handleIncrementCount}>incrementa</button>
