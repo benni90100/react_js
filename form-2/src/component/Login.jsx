@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Login() {
+export function Login({}) {
   const [data, setData] = useState({
     userName: "",
     password: "",
@@ -19,6 +19,7 @@ export function Login() {
       };
     });
   }
+ 
   return (
     <div>
       <input name="userName" value={data.userName} onChange={handleDataInput} />
@@ -29,6 +30,7 @@ export function Login() {
         onChange={handleDataInput}
       />
       <input type="checkbox" name="rememberMe" value={data.checkBox} onChange={handleDataInput}/>
+      
     </div>
   );
 }
