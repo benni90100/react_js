@@ -17,11 +17,15 @@ function handleAddTodoList() {
 useEffect(()=>{
 console.log(todoArray);
 },[todoArray])
+function handleResetTodoList() {
+  setTodoArray([])
+}
   return (
     <>
       <label htmlFor="todoList"></label>
       <input name="todoList" value={todo} onChange={handleTodoList} />
       <button onClick={handleAddTodoList}>add Todo</button>
+      <button onClick={handleResetTodoList}>add Todo</button>
       <ul>
         {todoArray.map((todo, index)=>{
           return <li key={index}>{todo}</li>
