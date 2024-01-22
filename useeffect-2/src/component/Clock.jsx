@@ -10,9 +10,10 @@ export function Clock() {
     }, 1000);
     return ()=>{
         clearInterval(intervalID)
+  console.log(date.toLocaleTimeString());      
     }
   }, []);
-  console.log(date.toLocaleTimeString());
+  
   return (
     <>
       <h2>current time :{date.toLocaleTimeString()}</h2>
