@@ -21,7 +21,7 @@ export function Counter({ initialValue }) {
     } else {
       console.log("valore uguale al valore iniziale");
     }
-  }, [count]);
+  }, [count, initialValue]);
   return (
     <>
       <h2 ref={refCount}>counter: {count}</h2>
