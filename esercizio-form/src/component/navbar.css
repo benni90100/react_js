@@ -1,0 +1,47 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 15px;
+}
+
+.navbar-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.navbar-dropdown:hover .dropdown-menu {
+    display: block;
+}

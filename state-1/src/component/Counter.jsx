@@ -4,7 +4,7 @@ export function Counter({ startCounter = 0  }) {
   const [count, setCount] = useState(startCounter);
 
   function handleCounterIncrement() {
-    setCount(count + 1)
+    setCount((c)=>c + 1)
   }
   return (
     <>
