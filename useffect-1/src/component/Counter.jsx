@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export function Counter() {
   const [count, setCount] = useState(0);
   function handleIncrementCount() {
-    setCount(count + 1);
+    setCount((c)=>c + 1);
   }
   useEffect(()=>{
     console.log(count);
