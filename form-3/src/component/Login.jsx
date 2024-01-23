@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import "./Login.css"
 export function Login({onLogin}) {
     const [data, setData]=useState({
         username:"",
@@ -17,14 +17,17 @@ export function Login({onLogin}) {
             return {
               ...data,
               [name]: type == "checkbox" ? checked : value,
+              
             };
+            
         })
+        
     }
     function handleLogin() {
       onLogin(data)
     }
     return (
-      <div>
+      <div className="container">
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -40,7 +43,8 @@ export function Login({onLogin}) {
           onChange={handleDataInput}
         />
         <label htmlFor="rememberme"></label>
-        <input
+        <input 
+        className="checkbox-cont"
           type="checkbox"
           name="rememberme"
           value={data.rememberme}
