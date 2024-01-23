@@ -1,9 +1,10 @@
 import { Age } from "./Age";
+import "./Welcome.css"
 export function Welcome({name}) {
     const myAge = 68
         return (
       <>
-        <p>Welcome {name}</p>
+        <p className="welcome">Welcome {name}</p>
 
         {myAge > 18 && <Age age={myAge + " maggiorenne"} />}
         {!!myAge && <Age age={myAge + " il props age esiste"} />}
