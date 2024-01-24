@@ -4,7 +4,7 @@ export function UncontrolledLogin(){
         const username = e.target.elements.namedItem("username").value
         const password = e.target.elements.namedItem("password").value
         const session = e.target.elements.namedItem("session").checked
-        const data = [username, password, session]
+        const data = {username, password, session}
         console.log(data);
     }
     return(
