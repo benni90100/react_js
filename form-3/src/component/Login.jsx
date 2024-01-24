@@ -17,7 +17,6 @@ export function Login({onLogin}) {
             return {
               ...data,
               [name]: type == "checkbox" ? checked : value,
-              
             };
             
         })
