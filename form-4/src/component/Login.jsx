@@ -55,8 +55,9 @@ export function Login({ onLogin }) {
         Login
       </button>
       <button disabled={isLoginDisabled} onClick={handlereset}>
-        Reset
+        Resetdev
       </button>
+      <h2>ciao{data.password}</h2>
     </div>
   );
 }

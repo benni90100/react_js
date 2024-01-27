@@ -1,14 +1,17 @@
+
 export function UncontrolledLogin() {
+  
   function handleUncontrolledLogin(e) {
     e.preventDefault()
     const formData = new FormData(e.target);
 
-    const data = {
+     const data = {
       username: formData.get("username"),
       password: formData.get("password"),
       session : formData.get("session") == "on" ? true : false
     };
     console.log(data);
+    
   }
 
   return (
@@ -18,6 +21,7 @@ export function UncontrolledLogin() {
       <input type="checkbox" name="session" />
       <button>Login</button>
       <button type="reset">reset</button>
+      <p>{}</p>
     </form>
   );
 }
