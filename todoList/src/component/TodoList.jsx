@@ -25,7 +25,7 @@ function handleResetTodoList() {
       <label htmlFor="todoList"></label>
       <input name="todoList" value={todo} onChange={handleTodoList} />
       <button onClick={handleAddTodoList}>add Todo</button>
-      <button onClick={handleResetTodoList}>add Todo</button>
+      <button onClick={handleResetTodoList}>delete</button>
       <ul>
         {todoArray.map((todo, index)=>{
           return <li key={index}>{todo}</li>
