@@ -1,25 +1,11 @@
-import { useEffect } from "react";
-import { useState } from "react";
 
-export function GithubUser({ username }) {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    async function fecthData() {
-      const res = await fetch(
-        `https://api.github.com/repos/octocat/${username}`
-      );
-      const data = await res.json();
-      setData(data);
-      console.log(data.owner.vatar_url);
-    }
-    fecthData();
-  }, []);
+export function GithubUser({user}) {
+  
+   
   return (
     <>
-      <h2>username {data && data.name}</h2>
-      <p>login {data && data.owner.login}</p>
-      <img src={data && data.owner.avatar_url} alt="" />
+      <h2>username {user.login}</h2>
+      <img src={user.avatar_url} alt="" />
     </>
   );
 }
