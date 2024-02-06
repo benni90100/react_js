@@ -1,6 +1,6 @@
 import { Route, Router, Routes } from "react-router-dom";
-import { Hello } from "./Hello";
-import { Counter } from "./Counter";
+import { Hello } from "./component/Hello";
+import { Counter } from "./component/Counter";
 export function App({ name }) {
   
   return (
