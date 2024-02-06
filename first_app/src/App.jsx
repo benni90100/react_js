@@ -1,12 +1,15 @@
-import { Hello } from "./hello";
-//questo import mi da errore se import ./Hello mentre l'errore non esiste se import ./hello
-//l'app funziona anche importando ./Hello
-export function App({name}) {
+
+import { Route, Router, Routes } from "react-router-dom";
+import { Hello } from "./Hello";
+export function App({ name }) {
+  
   return (
     <div>
       <h3>ciao sono {name}</h3>
-      <Hello/>
-      
+
+      <Routes>
+        <Route path="/" element={<Hello/>} />
+      </Routes>
     </div>
   );
 }
