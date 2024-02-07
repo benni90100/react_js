@@ -1,16 +1,15 @@
+import { Welcome } from "./Welcome";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Route, Router, Routes } from "react-router-dom";
-import { Hello } from "./Hello";
-import { Counter } from "./Counter";
-export function App({ name }) {
-  
+export function App() {
   return (
-    <div>
-      <h3>ciao sono {name}</h3>
-
-      <Routes>
-        <Route path="/" element={<Hello/>} />
-      </Routes>
-    </div>
+    <BrowserRouter>
+     <Routes>
+        <Route path='/' element={<Welcome name={"Benni"} />}/>
+    </Routes>
+    </BrowserRouter>
+   
+     
+  
   );
 }
