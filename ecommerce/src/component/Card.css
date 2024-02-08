@@ -1,0 +1,17 @@
+.card{
+    width: 200px;
+     border: 1px solid black;
+     border-radius:20px ;
+     height: 300px;
+
+}
+.image-container{
+    height: 50%;
+    
+}
+.content-container{
+    height: 50%;
+}
+.image{
+    width: 50%;
+}

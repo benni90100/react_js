@@ -1,4 +1,5 @@
-import { Welcome } from "./Welcome";
+import { Counter } from "./component/Counter";
+import { Welcome } from "./component/Welcome";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export function App() {
@@ -6,6 +7,7 @@ export function App() {
     <BrowserRouter>
      <Routes>
         <Route path='/' element={<Welcome name={"Benni"} />}/>
+        <Route path="/counter" element={<Counter/>}/>
     </Routes>
     </BrowserRouter>
   );
