@@ -1,5 +1,6 @@
+import { useState } from "react";
 import "./Card.css"
-export function Card({product}) {
+export function Card({product, event}) {
     
   return (
     <div className="card">
@@ -9,6 +10,7 @@ export function Card({product}) {
       <div className="content-container">
       <h2 className="title">{product.title}</h2>
       <p className="price">{product.price}</p>
+      <button id={product.id} onClick={event} >Add to Cart</button>
       </div>
     </div>
   );
