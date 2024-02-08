@@ -11,14 +11,15 @@ export function App() {
       <div className="navbar">
         <Link to="/">Welcome</Link>
         <Link to="/counter">Counter</Link>
-        <Link to="/user/:username">Github</Link>
-        <Link to="/users">Users List</Link>
+        
+        <Link to="/users">Users github List</Link>
       </div>
       <Routes>
         <Route path="/" element={<Welcome name={"Benni"} />} />
         <Route path="/counter" element={<Counter />} />
-        <Route path="/user/:username" element={<GithubUser />} />
-        <Route path="/users" element={<GithubUserList/>} />
+        <Route path="/users" element={<GithubUserList/>} >
+        <Route path=":username" element={<GithubUser />} />
+        </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
