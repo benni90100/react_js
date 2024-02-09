@@ -21,6 +21,11 @@ export function useGithubUsers() {
 
     console.log(username);
   }
+  function handleRefresh() {
+    if (username) {
+      mutate()
+    }
+  }
 
-  return { data, getInput, handleUsername, error };
+  return { data, getInput, handleUsername, error, handleRefresh };
 }
