@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./GithubUser.css"
 export function GithubUser() {
   const [data, setData] = useState(null);
@@ -20,8 +20,9 @@ export function GithubUser() {
       <div className="card-content">
       <h2>Name {data && data.name}</h2>
       <p>username {data && data.login}</p>
+      <button><Link to={"/."}>retri</Link></button>
       </div>
-      
+     
       </div>
       
     </>
