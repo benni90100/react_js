@@ -1,15 +1,14 @@
 import useSWR from "swr";
 import { useState } from "react";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+
 
 export function useGithubUsers() {
   const [username, setUsername] = useState(null);
   const [usernameInput, setUsernameInput] = useState(null);
 
   const { data, error, mutate } = useSWR(
-    username ? `https://api.github.com/users/${username}` : null,
-    fetcher
+    username ? `https://api.github.com/users/${username}` : null
   );
   function handleUsername(e) {
     setUsernameInput(e.target.value);
