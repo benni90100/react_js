@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import "./GithubUserList.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, Routes, useParams, Route } from "react-router-dom";
+function UserDetails() {
+  const { username } = useParams();
 
-export function GithubUserList() {
+  return <div>User Details for {username}</div>;
+}
+
+export function GithubUserList({children}) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,6 +21,7 @@ export function GithubUserList() {
   }, []);
   return (
     <>
+   
       <ul>
         {data &&
           data.map((item) => {

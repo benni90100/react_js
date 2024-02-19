@@ -17,10 +17,13 @@ export function App() {
       <Routes>
         <Route path="/" element={<Welcome name={"Benni"} />} />
         <Route path="/counter" element={<Counter />} />
-        <Route path="/users" element={<GithubUserList />}/>
+        <Route path="/users" element={<GithubUserList />}>
+          <Route index element={<p>inserisci uno username</p>}/>
+          <Route  path="users/:username" element={<GithubUser /> } />
+        </Route>
           
         
-          <Route  path="users/:username" element={<GithubUser /> } />
+          
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
